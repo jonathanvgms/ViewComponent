@@ -1,0 +1,31 @@
+﻿@model EjemploViewComponent.Models.Components.BootstrapModalModel
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#editar-@Model.Id">
+    @Model.Title
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="editar-@Model.Id" tabindex="-1" aria-labelledby="editarModelLabel-@Model.Id" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="editarModelLabel-@Model.Id">@Model.Title</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                @Model.ControllerName <br />
+                @Model.ActionName <br />
+                @Model.MethodName 
+                <hr />
+                @Model.Message
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary">Aceptar</button>
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>

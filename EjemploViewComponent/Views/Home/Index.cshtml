@@ -1,0 +1,31 @@
+﻿@* forma con metodo *@
+
+@await Component.InvokeAsync("BootstrapModal", new BootstrapModalModel { Id = 1, Title = "Metodo Invoke", Message =
+"View Component con metodo Invoke", ControllerName="NombreControlador", ActionName="NombreMetodo", MethodName="get" })
+
+@await Component.InvokeAsync("BootstrapModal", new BootstrapModalModel { Id = 2, Title = "Metodo Invoke 2", Message =
+"View Component con metodo Invoke 2", ControllerName="NombreControlador", ActionName="NombreMetodo", MethodName="get" })
+
+
+<vc:bootstrap-modal model="@( new BootstrapModalModel { Id = 3, Title = "Tag Helper 3", Message = "View Component con Tag helper 3", ControllerName="NombreControlador", 
+    ActionName="NombreMetodo", MethodName="post" })">
+</vc:bootstrap-modal>
+
+<vc:bootstrap-modal model="@( new BootstrapModalModel { Id = 4, Title = "Tag Helper 4", Message = "View Component con Tag helper 4", ControllerName="NombreControlador", 
+    ActionName="NombreMetodo", MethodName="post" })">
+</vc:bootstrap-modal>
+
+<br>
+<br>
+<div class="row">
+    @await Component.InvokeAsync("NuevoComponente", new NuevoComponenteModel { Titulo = "Sorry Spidey", Contenido =
+    "Bugle drops charges" })
+    @await Component.InvokeAsync("NuevoComponente", new NuevoComponenteModel { Titulo = "Sorry Spidey", Contenido =
+    "Bugle drops charges" })
+    @await Component.InvokeAsync("NuevoComponente", new NuevoComponenteModel { Titulo = "Sorry Spidey", Contenido =
+    "Bugle drops charges" })
+    @await Component.InvokeAsync("NuevoComponente", new NuevoComponenteModel { Titulo = "Sorry Spidey", Contenido =
+    "Bugle drops charges" })
+    @await Component.InvokeAsync("NuevoComponente", new NuevoComponenteModel { Titulo = "Sorry Spidey", Contenido =
+    "Bugle drops charges" })
+</div>
